@@ -46,7 +46,7 @@ export const getGameProfilesFromAddress = async (
 
     setGameProfiles(names);
   } catch (error) {
-    console.log(error);
+    (error);
   }
 };
 
@@ -60,6 +60,6 @@ export const createGameProfile = async (
 
     await RPC_PROVIDER.waitForTransaction(addProfileTxn.transaction_hash);
   } catch (error) {
-    console.log(error);
+    (error);
   }
 };

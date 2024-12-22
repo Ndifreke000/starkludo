@@ -99,10 +99,10 @@ async function removeLogMessages() {
 // Execute the function
 removeLogMessages()
     .then(({ totalLogsRemoved, modifiedFiles, backupFiles }) => {
-        console.log(`\nRemoved ${totalLogsRemoved} log messages from ${modifiedFiles.length} files`);
-        console.log('\nModified files:');
-        modifiedFiles.forEach(file => console.log(`- ${file}`));
-        console.log('\nBackups created in:', Object.values(backupFiles)[0]?.split('/backups/')[0] + '/backups/[date]');
+        (`\nRemoved ${totalLogsRemoved} log messages from ${modifiedFiles.length} files`);
+        ('\nModified files:');
+        modifiedFiles.forEach(file => (`- ${file}`));
+        ('\nBackups created in:', Object.values(backupFiles)[0]?.split('/backups/')[0] + '/backups/[date]');
     })
     .catch(error => {
         console.error('Failed to remove log messages:', error);
